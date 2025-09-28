@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,327 +11,324 @@
             box-sizing: border-box;
         }
 
-```
-    body {
-        font-family: 'Arial', sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        color: white;
-    }
-
-    .header {
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        padding: 1rem 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2rem;
-    }
-
-    .logo {
-        font-size: 2rem;
-        font-weight: bold;
-        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-        from { filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.5)); }
-        to { filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.5)); }
-    }
-
-    .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-    }
-
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .nav-links a:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-2px);
-    }
-
-    .hero {
-        text-align: center;
-        padding: 4rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        animation: fadeInUp 1s ease;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        margin-bottom: 2rem;
-        animation: fadeInUp 1s ease 0.3s both;
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
-    }
 
-    .search-container {
-        max-width: 600px;
-        margin: 2rem auto;
-        position: relative;
-        animation: fadeInUp 1s ease 0.6s both;
-    }
-
-    .search-box {
-        width: 100%;
-        padding: 1rem 1.5rem;
-        font-size: 1.1rem;
-        border: none;
-        border-radius: 50px;
-        background: rgba(255, 255, 255, 0.9);
-        color: #333;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-    }
-
-    .search-box:focus {
-        outline: none;
-        transform: scale(1.02);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .categories {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin: 3rem 0;
-        flex-wrap: wrap;
-        padding: 0 2rem;
-        animation: fadeInUp 1s ease 0.9s both;
-    }
-
-    .category-btn {
-        padding: 0.8rem 2rem;
-        background: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-radius: 25px;
-        color: white;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 1rem;
-        backdrop-filter: blur(5px);
-    }
-
-    .category-btn:hover, .category-btn.active {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    .games-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    .game-card {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.3s ease;
-        cursor: pointer;
-        animation: fadeInUp 1s ease both;
-    }
-
-    .game-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .game-image {
-        width: 100%;
-        height: 200px;
-        background: linear-gradient(45deg, #ff9a9e, #fecfef);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .game-image::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        transform: rotate(45deg);
-        animation: shimmer 3s infinite;
-    }
-
-    @keyframes shimmer {
-        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-        100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-    }
-
-    .game-info {
-        padding: 1.5rem;
-    }
-
-    .game-title {
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-    }
-
-    .game-description {
-        opacity: 0.8;
-        font-size: 0.9rem;
-        line-height: 1.4;
-        margin-bottom: 1rem;
-    }
-
-    .play-btn {
-        width: 100%;
-        padding: 0.8rem;
-        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-        border: none;
-        border-radius: 10px;
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .play-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .footer {
-        background: rgba(0, 0, 0, 0.3);
-        text-align: center;
-        padding: 2rem;
-        margin-top: 4rem;
-    }
-
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5rem;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
         }
-        
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.5)); }
+        }
+
         .nav-links {
-            display: none;
+            display: flex;
+            list-style: none;
+            gap: 2rem;
         }
-        
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
         .categories {
-            gap: 0.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease 0.9s both;
         }
-        
+
         .category-btn {
-            padding: 0.6rem 1.5rem;
+            padding: 0.8rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: fadeInUp 1s ease both;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .game-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .game-info {
+            padding: 1.5rem;
+        }
+
+        .game-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .game-description {
+            opacity: 0.8;
             font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
         }
-    }
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(5px);
-    }
+        .play-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    .modal-content {
-        position: relative;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        margin: 2% auto;
-        padding: 2rem;
-        width: 95%;
-        max-width: 1200px;
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    }
+        .play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-    .close {
-        color: white;
-        float: right;
-        font-size: 2rem;
-        font-weight: bold;
-        cursor: pointer;
-        line-height: 1;
-    }
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
 
-    .close:hover {
-        opacity: 0.7;
-    }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .categories {
+                gap: 0.5rem;
+            }
+            
+            .category-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
 
-    .game-frame {
-        width: 100%;
-        height: 700px;
-        border: none;
-        border-radius: 10px;
-        margin-top: 1rem;
-        background: white;
-    }
+            .modal-content {
+                width: 98%;
+                margin: 5% auto;
+                padding: 1rem;
+            }
+            
+            .game-frame {
+                height: 400px;
+            }
+        }
 
-    @media (max-width: 768px) {
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
         .modal-content {
-            width: 98%;
-            margin: 5% auto;
-            padding: 1rem;
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 2% auto;
+            padding: 2rem;
+            width: 95%;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
-        
-        .game-frame {
-            height: 400px;
-        }
-    }
-</style>
-```
 
+        .close {
+            color: white;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close:hover {
+            opacity: 0.7;
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+            background: white;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -347,256 +343,271 @@
         </nav>
     </header>
 
-```
-<main>
-    <section class="hero" id="inicio">
-        <h1>🎮 Juegos Desbloqueados</h1>
-        <p>Disfruta de los mejores juegos online sin restricciones. ¡Diversión garantizada!</p>
-        
-        <div class="search-container">
-            <input type="text" class="search-box" placeholder="🔍 Busca tu juego favorito..." id="searchInput">
-        </div>
-    </section>
-
-    <section class="categories" id="categorias">
-        <button class="category-btn active" data-category="todos">Todos</button>
-        <button class="category-btn" data-category="accion">Acción</button>
-        <button class="category-btn" data-category="puzzle">Puzzle</button>
-        <button class="category-btn" data-category="deportes">Deportes</button>
-        <button class="category-btn" data-category="estrategia">Estrategia</button>
-        <button class="category-btn" data-category="aventura">Aventura</button>
-    </section>
-
-    <section class="games-grid" id="juegos">
-        <!-- MAS CHIDOS -->
-        <div class="game-card" data-category="aventura" data-game="mario3d">
-            <div class="game-image" style="background: url('data:image/jpeg;base64,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
-
-        <div class="game-card" data-category="accion" data-game="templerun">
-            <div class="game-image">🏃</div>
-            <div class="game-info">
-                <h3 class="game-title">Temple Run - ¡Más Popular!</h3>
-                <p class="game-description">Corre sin parar por templos antiguos. ¡Esquiva obstáculos y recolecta monedas!</p>
-                <button class="play-btn">Jugar Ahora</button>
+    <main>
+        <section class="hero" id="inicio">
+            <h1>🎮 Juegos Desbloqueados</h1>
+            <p>Disfruta de los mejores juegos online sin restricciones. ¡Diversión garantizada!</p>
+            
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="🔍 Busca tu juego favorito..." id="searchInput">
             </div>
-        </div>
+        </section>
 
-        <div class="game-card" data-category="accion" data-game="gamesop">
-            <div class="game-image">🎮</div>
-            <div class="game-info">
-                <h3 class="game-title">Games Op</h3>
-                <p class="game-description">Colección de juegos increíbles. Variedad y diversión garantizada.</p>
-                <button class="play-btn">Jugar Ahora</button>
+        <section class="categories" id="categorias">
+            <button class="category-btn active" data-category="todos">Todos</button>
+            <button class="category-btn" data-category="accion">Acción</button>
+            <button class="category-btn" data-category="puzzle">Puzzle</button>
+            <button class="category-btn" data-category="deportes">Deportes</button>
+            <button class="category-btn" data-category="estrategia">Estrategia</button>
+            <button class="category-btn" data-category="aventura">Aventura</button>
+        </section>
+
+        <section class="games-grid" id="juegos">
+            <!-- MAS CHIDOS -->
+            <div class="game-card" data-category="aventura" data-game="mario3d">
+                <div class="game-image">🍄</div>
+                <div class="game-info">
+                    <h3 class="game-title">Mario 3D - ¡Más Popular!</h3>
+                    <p class="game-description">El icónico Mario en 3D. Aventuras increíbles te esperan en este mundo mágico.</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
             </div>
-        </div>
 
-        <!-- RANDOM -->
-        <div class="game-card" data-category="accion" data-game="randomgame">
-            <div class="game-image">🎯</div>
-            <div class="game-info">
-                <h3 class="game-title">Random Games</h3>
-                <p class="game-description">Descubre juegos al azar. Siempre algo nuevo y emocionante que probar.</p>
-                <button class="play-btn">Jugar Ahora</button>
+            <div class="game-card" data-category="accion" data-game="templerun">
+                <div class="game-image">🏃</div>
+                <div class="game-info">
+                    <h3 class="game-title">Temple Run - ¡Más Popular!</h3>
+                    <p class="game-description">Corre sin parar por templos antiguos. ¡Esquiva obstáculos y recolecta monedas!</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
             </div>
-        </div>
 
-        <div class="game-card" data-category="aventura" data-game="mario2d">
-            <div class="game-image" style="background: url('data:image/png;base64,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
-
-        <div class="game-card" data-category="accion" data-game="classroom6x">
-            <div class="game-image">🏫</div>
-            <div class="game-info">
-                <h3 class="game-title">Classroom6x</h3>
-                <p class="game-description">Juegos especiales para el aula. Algunos pueden estar bloqueados.</p>
-                <button class="play-btn">Jugar Ahora</button>
+            <div class="game-card" data-category="accion" data-game="gamesop">
+                <div class="game-image">🎮</div>
+                <div class="game-info">
+                    <h3 class="game-title">Games Op</h3>
+                    <p class="game-description">Colección de juegos increíbles. Variedad y diversión garantizada.</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
             </div>
-        </div>
 
-        <div class="game-card" data-category="accion" data-game="game76">
-            <div class="game-image">🕹️</div>
-            <div class="game-info">
-                <h3 class="game-title">Game76</h3>
-                <p class="game-description">Mega colección de 76 juegos desbloqueados. ¡Diversión sin límites!</p>
-                <button class="play-btn">Jugar Ahora</button>
+            <!-- RANDOM -->
+            <div class="game-card" data-category="accion" data-game="randomgame">
+                <div class="game-image">🎯</div>
+                <div class="game-info">
+                    <h3 class="game-title">Random Games</h3>
+                    <p class="game-description">Descubre juegos al azar. Siempre algo nuevo y emocionante que probar.</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
             </div>
-        </div>
 
-        <div class="game-card" data-category="accion" data-game="subwaysurfer">
-            <div class="game-image" style="background: url('data:image/png;base64,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
-    </section>
-</main>
+            <div class="game-card" data-category="aventura" data-game="mario2d">
+                <div class="game-image">🍄</div>
+                <div class="game-info">
+                    <h3 class="game-title">Mario 2D</h3>
+                    <p class="game-description">El clásico Mario Bros en 2D. Nostalgia pura con la mejor jugabilidad.</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
+            </div>
 
-<!-- Modal para juegos -->
-<div id="gameModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modalTitle">Cargando juego...</h2>
-        <div id="gameContainer">
-            <p>El juego se está cargando...</p>
+            <div class="game-card" data-category="accion" data-game="classroom6x">
+                <div class="game-image">🏫</div>
+                <div class="game-info">
+                    <h3 class="game-title">Classroom6x</h3>
+                    <p class="game-description">Juegos especiales para el aula. Algunos pueden estar bloqueados.</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="accion" data-game="game76">
+                <div class="game-image">🕹️</div>
+                <div class="game-info">
+                    <h3 class="game-title">Game76</h3>
+                    <p class="game-description">Mega colección de 76 juegos desbloqueados. ¡Diversión sin límites!</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="accion" data-game="subwaysurfer">
+                <div class="game-image">🚇</div>
+                <div class="game-info">
+                    <h3 class="game-title">Subway Surfers</h3>
+                    <p class="game-description">¡Corre por las vías del metro! Esquiva trenes y recolecta monedas en Tokio.</p>
+                    <button class="play-btn">Jugar Ahora</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para juegos -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Cargando juego...</h2>
+            <div id="gameContainer">
+                <p>El juego se está cargando...</p>
+            </div>
         </div>
     </div>
-</div>
 
-<footer class="footer" id="contacto">
-    <p>&copy; 2025 Juegos Desbloqueados. Todos los derechos reservados.</p>
-    <p>¡Diversión sin límites para todos!</p>
-</footer>
+    <footer class="footer" id="contacto">
+        <p>&copy; 2025 Juegos Desbloqueados. Todos los derechos reservados.</p>
+        <p>¡Diversión sin límites para todos!</p>
+    </footer>
 
-<script>
-    // Variables globales
-    const games = document.querySelectorAll('.game-card');
-    const categoryBtns = document.querySelectorAll('.category-btn');
-    const searchInput = document.getElementById('searchInput');
-    const modal = document.getElementById('gameModal');
-    const closeModal = document.querySelector('.close');
-    const modalTitle = document.getElementById('modalTitle');
-    const gameContainer = document.getElementById('gameContainer');
+    <script>
+        // Variables globales
+        const games = document.querySelectorAll('.game-card');
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const searchInput = document.getElementById('searchInput');
+        const modal = document.getElementById('gameModal');
+        const closeModal = document.querySelector('.close');
+        const modalTitle = document.getElementById('modalTitle');
+        const gameContainer = document.getElementById('gameContainer');
 
-    // Animaciones al cargar
-    window.addEventListener('load', () => {
-        games.forEach((game, index) => {
-            game.style.animationDelay = `${index * 0.1}s`;
+        // Animaciones al cargar
+        window.addEventListener('load', () => {
+            games.forEach((game, index) => {
+                game.style.animationDelay = `${index * 0.1}s`;
+            });
         });
-    });
 
-    // Filtros por categoría
-    categoryBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remover clase activa de todos los botones
-            categoryBtns.forEach(b => b.classList.remove('active'));
-            // Agregar clase activa al botón clickeado
-            btn.classList.add('active');
-            
-            const category = btn.dataset.category;
+        // Filtros por categoría
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover clase activa de todos los botones
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                // Agregar clase activa al botón clickeado
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                
+                games.forEach(game => {
+                    if (category === 'todos' || game.dataset.category === category) {
+                        game.style.display = 'block';
+                        game.style.animation = 'fadeInUp 0.5s ease both';
+                    } else {
+                        game.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Buscador
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
             
             games.forEach(game => {
-                if (category === 'todos' || game.dataset.category === category) {
+                const title = game.querySelector('.game-title').textContent.toLowerCase();
+                const description = game.querySelector('.game-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
                     game.style.display = 'block';
-                    game.style.animation = 'fadeInUp 0.5s ease both';
                 } else {
                     game.style.display = 'none';
                 }
             });
         });
-    });
 
-    // Buscador
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        
+        // Abrir juegos en modal
         games.forEach(game => {
-            const title = game.querySelector('.game-title').textContent.toLowerCase();
-            const description = game.querySelector('.game-description').textContent.toLowerCase();
-            
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                game.style.display = 'block';
-            } else {
-                game.style.display = 'none';
-            }
+            const playBtn = game.querySelector('.play-btn');
+            playBtn.addEventListener('click', () => {
+                const gameTitle = game.querySelector('.game-title').textContent;
+                const gameType = game.dataset.game;
+                
+                modalTitle.textContent = gameTitle;
+                showGame(gameType);
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
         });
-    });
 
-    // Abrir juegos en modal
-    games.forEach(game => {
-        const playBtn = game.querySelector('.play-btn');
-        playBtn.addEventListener('click', () => {
-            const gameTitle = game.querySelector('.game-title').textContent;
-            const gameType = game.dataset.game;
-            
-            modalTitle.textContent = gameTitle;
-            showGame(gameType);
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    // Cerrar modal
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        gameContainer.innerHTML = '<p>El juego se está cargando...</p>';
-    });
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
+        // Cerrar modal
+        closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
             gameContainer.innerHTML = '<p>El juego se está cargando...</p>';
-        }
-    });
+        });
 
-    // Función para mostrar juegos
-    function showGame(gameType) {
-        // URLs reales de los juegos
-        const gameUrls = {
-            // MAS CHIDOS
-            'mario3d': 'https://auguhhcbxstberc/knhelmann.com/mario/',
-            'templerun': 'https://games.engineering.com/temple-run-2/index.html',
-            'gamesop': 'https://unblocked-games.s3.amazonaws.com/index.html',
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                gameContainer.innerHTML = '<p>El juego se está cargando...</p>';
+            }
+        });
+
+        // Función para mostrar juegos
+        function showGame(gameType) {
+            // URLs reales de los juegos
+            const gameUrls = {
+                // MAS CHIDOS
+                'mario3d': 'https://supermariobrosonline.github.io/',
+                'templerun': 'https://games.engineering.com/temple-run-2/index.html',
+                'gamesop': 'https://unblocked-games.s3.amazonaws.com/index.html',
+                
+                // RANDOM
+                'randomgame': 'https://www.engineering.com/games/',
+                'mario2d': 'https://supermariobrosonline.github.io/',
+                'classroom6x': 'https://sites.google.com/view/classroom6x/',
+                'game76': 'https://sites.google.com/view/unblocked-game76/home',
+                'subwaysurfer': 'https://ad-freegames.github.io/subway-surfers/tokyo.html'
+            };
+
+            const gameUrl = gameUrls[gameType] || '#';
             
-            // RANDOM
-            'randomgame': 'https://www.engineering.com/games/',
-            'mario2d': 'https://supermariobrosonline.github.io/',
-            'classroom6x': 'https://sites.google.com/view/classroom6x/',
-            'game76': 'https://sites.google.com/view/unblocked-game76/home',
-            'subwaysurfer': 'https://ad-freegames.github.io/subway-surfers/tokyo.html'
+            gameContainer.innerHTML = `
+                <iframe src="${gameUrl}" class="game-frame" title="${gameType} game"></iframe>
+                <p style="margin-top: 1rem; text-align: center; opacity: 0.8;">
+                    Si el juego no carga, prueba refrescando la página o usando otro navegador.
+                </p>
+            `;
+        }
+
+        // Efectos de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Efecto parallax suave
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.header');
+            
+            if (scrolled > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.5)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.3)';
+            }
+        });
+
+        // Animación de entrada para las cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
-        const gameUrl = gameUrls[gameType] || '#';
-        
-        gameContainer.innerHTML = `
-            <iframe src="${gameUrl}" class="game-frame" title="${gameType} game"></iframe>
-            <p style="margin-top: 1rem; text-align: center; opacity: 0.8;">
-                Si el juego no carga, prueba refrescando la página o usando otro navegador.
-            </p>
-        `;
-    }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
 
-    // Efectos de scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        games.forEach(game => {
+            observer.observe(game);
         });
-    });
-
-    // Efecto parallax suave
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const header = document.querySelector('.header');
-        
-        if (scrolled > 100) {
-            header.style.background = 'rgba(0, 0, 0, 0.5)';
-        } else {
-            header.style.background = 'rgba(0, 0, 0, 0.3)';
-        }
-    });
-
-    // Animación de entrada para las cards
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
-            }
-        });
-    }, observerOptions);
-
-    games.forEach(game => {
-        observer.observe(game);
-    });
-</script>
-```
-
+    </script>
 </body>
 </html>
